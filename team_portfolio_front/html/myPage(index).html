@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- 마이페이지 css -->
+    <link rel="stylesheet" href="../css/myPage.css">
+    <!-- 동아리 만들기 css -->
+    <link rel="stylesheet" href="../css/createClass.css">
+    <!-- 유저정보 수정 css -->
+    <link rel="stylesheet" href="../css/updateUserInfo.css">
+    <!-- 내가 가입한 클래스 && 만든 클래스 공용 css -->
+    <link rel="stylesheet" href="../css/me_regi_my_make.css">
+    <!-- 스와이퍼 css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
+    <!-- 스와이퍼 js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_content_box">
+                <!-- 주소 넣어주세요========================== -->
+                <a href="./mainPage(index).html">
+                    <div class="logo"></div>
+                </a>
+                <div class="search_bar">
+                    <div class="search_icon"></div>
+                </div>
+                <div class="h_right_box">
+                    <a href="#" class="icon_a">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="NotificationsNoneRoundedIcon" style="font-size: 1.75rem;"><path d="M19.29 17.29 18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-1.29 1.29c-.63.63-.19 1.71.7 1.71h13.17c.9 0 1.34-1.08.71-1.71zM16 17H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2z"></path></svg>
+                    </a>
+                    <a href="myPage(index).html" class="icon_a">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="AccountCircleOutlinedIcon" style="font-size: 1.75rem;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"></path><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"></path></svg>
+                        <svg class="logout_icon MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-7wsri6" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ExitToAppIcon"><path d="M10.09 15.59 11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg>
+                    </a>
+                    <!-- 주소 넣어주세요========================== -->
+                    <a href="login(index).html" class="icon_a">
+                        <svg class="login_icon MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-7wsri6" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ExitToAppIcon"><path d="M10.09 15.59 11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg>
+                    </a>
+                </div>
+                <div class="Responsive_hem">
+                    <div class="line line_top"></div>
+                    <div class="line line_mid"></div>
+                    <div class="line line_bot"></div>
+                </div>
+            </div>
+            <!-- 주소 넣어주세요========================== -->
+            <div class="blockpan">
+      
+            </div>
+            <div class="hem_pan">
+                <div class="hem_nav_pan">
+                    <a href="./mainPage(index).html">
+                        <div class="pan_menu">
+                            <div>
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-7wsri6 pan_icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="HomeOutlinedIcon"><path d="m12 5.69 5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3 2 12h3v8h6v-6h2v6h6v-8h3L12 3z"></path>
+                                </svg>
+                            </div>
+                            홈
+                        </div>
+                    </a>
+                    <div class="pan_menu search_nav_btn">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss97 css-vubbuv pan_icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchIcon">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+                        검색
+                    </div>
+                    <a href="./myPage(index).html">
+                        <div class="pan_menu">
+                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv pan_icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="AccountCircleOutlinedIcon" style="font-size: 1.75rem;">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"></path><path d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"></path>
+                            </svg>
+                            프로필
+                        </div>
+                    </a>
+                    <a href="./login(index).html">
+                        <div class="pan_menu">
+                            <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-7wsri6 pan_icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ExitToAppIcon">
+                                <path d="M10.09 15.59 11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z">
+                                </path>
+                            </svg>
+                            로그인
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="search_pan_box">
+                <div class="search_pan_outer">
+                    <!-- 여기 폼태그 있어요=================================== -->
+                    <form action="" method="post" class="search_pan_form">
+                        <div class="pan_search_box">
+                            <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-7wsri6 search_pan_icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchIcon"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                            <!--인풋 태그 있어요============================== -->
+                            <input type="text" class="pan_search_bar">
+                        </div>
+                        <!-- 여기 name 어떻게 -->
+                        <!--인풋 태그 있어요============================== -->
+                        <div class="option_box">
+                            <div class="option_top_box">
+                                <div class="top_box_left">
+                                    <div class="option_bar option_bar_cate">
+                                        <div class="text_box">지역</div>
+                                        <select name="addr" id="addr_select">
+                                            <option value="" disabled hidden selected>지역 </option>
+                                        </select>
+                                    </div>
+                                    <div class="option_bar option_bar_cate">
+                                        <div class="text_box">관심사</div>
+                                        <select name="category" id="category_select" onchange="show_mini()">
+                                            <option value="" disabled hidden selected>관심사</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="top_box_right" id="top_box_right">
+                                    <div class="option_bar">
+                                        <div class="score_box">
+                                            <div class="text_box">평점</div>
+                                                <span id="star_score" class=" score"></span>
+                                        </div>
+                                        <input type="range" min="0" max="5" step="1" value="0" class="slider" id="myRange_star">
+                                    </div>
+                                    <div class="option_bar">
+                                        <div class="score_box">
+                                            <div class="text_box">개설일</div>
+                                            <span id="date_score" class=" score"></span>
+                                        </div>
+                                        <input type="range" min="0" max="365" step="1" value="0" class="slider" id="myRange_date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option_mid_box">
+                             <!-- 스크립테에서 넣고 있어요 -->
+                                 
+                            </div>
+                            <div class="option_bot_box">
+                                <div class="search_btn_box">
+                                    <input type="reset" value="초기화" class="option_input slider_reset_btn">
+                                    <a href="./searchPage(index).html">
+                                        <div class="option_input">
+                                            검색하기
+                                        </div>
+                                    </a>
+                                    <!-- <input type="submit" value="검색하기" class="option_input"> -->
+                                </div>
+                                <div class="close_btn_box">
+                                    <div class="search_pan_close_btn">
+                                        닫기
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- 이거 화면 검은색 블럭판입니다 -->
+        <div class="create_block_pan"></div>
+<!-- 여기 동아리개설 팝업 입니다===================================================== -->
+        <div class="create_class">
+            <form action="">
+                <div class="create_class_L create_class_box">
+                    <div class="create_logo"></div>
+                        <div class="create_input_box">
+                            <div class="input_outer">
+                                <span>리밋명</span> 
+                                <input type="text" class="create_option create_input" placeholder="리밋명">
+                            </div>                        
+                            <div class="input_outer">
+                                <span>지역 </span> 
+                                <select name="" id="class_addr" class="create_option" >
+                                    <option value="" disabled hidden selected>지역</option>
+                            
+                                </select>
+                            </div>                    
+                            <div class="input_outer">
+                                <span>대분류 </span> 
+                                <select id="class_big_cate" class="create_option" onchange="option_none()">
+                                    <option value="" disabled hidden selected >대분류</option>
+                            
+                                </select>
+                            </div>                        
+                            <div class="input_outer mini_cate_none">
+                                <span>소분류 </span> 
+                                <select name="" id="class_small_cate" class="create_option ">
+                                    <option value="" disabled hidden selected>소분류</option>
+                            
+                                </select>
+                            </div>     
+                            <div class="btn_box">
+                                <input type="reset" class="create_close_btn" value="닫기">
+                                <span class="next_btn">다음</span>   
+                                <span class="alert_comment">빈 항목이 있습니다</span>
+                            </div>                   
+                        </div>
+                </div>
+                <div class="create_class_R create_class_box">
+                    <div class="create_logo"></div>
+                    <h2>리밋 설명</h2>
+                    <textarea name="" id="class_info" style="resize: none;">
+                    </textarea>
+                    <h2>소개 사진</h2>
+                    <div class="img_box_outer">
+                        <div class="create_img"></div>
+                        <div class="create_img"></div>
+                        <div class="create_img"></div>
+                        <div class="create_img"></div>
+                        <input type="file" value="사진선택">
+                    </div>
+                    <div class="btn_box create_form">
+                        <span class="prev_btn">이전으로</span>  
+                        <input type="submit" value="개설하기" class="create_class_btn">
+                    </div>           
+                </div>
+            </form>
+        </div>
+<!-- 여기 유저정보 업데이트 입니다===================================================== -->
+        <form class="update_User_Info">
+            <div class="update_logo"></div>
+            <div class="update_box">
+                <div class="update_div">
+                    <span>아이디</span>
+                    <input type="text" class="update_opt update_input" placeholder="아이디 입력" value="홍길동" readonly>
+                </div>
+                <div class="update_div">
+                    <span>비밀번호</span>
+                    <!-- 클래스 이름 pw생김 -->
+                    <input type="password" class="update_opt update_input pw" placeholder="8~16 자리">
+                </div>
+                <div class="update_div">
+                    <span>비밀번호 확인</span>
+                    <!-- 클래스 이름 pw_chk생김 -->
+                    <input type="password" class="update_opt update_input pw_chk">
+                </div>
+                <div class="update_div">
+                    <span>희망지역</span>
+                    <select name="" id="update_addr" class="update_opt">
+                        <option value="" disabled selected hidden>==희망지역==</option>
+                    </select>
+                </div>
+                <div class="update_div">
+                    <span>카테고리</span>
+                    <select name="" id="update_cate" class="update_opt">
+                        <option value="" disabled selected hidden>==카테고리==</option>
+                    </select>
+                </div>
+                <div class="update_btn_box">
+                    <input type="reset" class="update_close_btn" value="닫기">
+                    <input type="submit" value="수정하기" class="update_submit_btn">
+                    <!-- 이부분 span하나 더 생기고 클래스 이름 생김 -->
+                    <span class="update_null"></span>
+                </div>
+            </div>
+        </form>
+<!-- 가입한 클래스 보여주는 팝업 -->
+        <div class="register_class_controll">
+            <div class="register_class_controll_logo"></div>
+            <div class="content_title_box">
+                <span class="content_title">가입 리밋:</span><span class="register_class_num">10</span><span>개</span>
+            </div>
+            <div class="swiper mySwiper swiper_btn_pos">
+                <div class="swiper-wrapper register_class_controll_content">
+                
+                </div>
+            </div>
+            <div class="register_class_controll_box">
+                <span class="close_btn">
+                    닫기
+                </span>
+            </div>
+        </div>
+<!-- 내가 개설한 클래스 보여주는 팝업 가입 클래스랑 -->
+        <div class="my_make_class">
+            <div class="my_make_class_controll">
+                <div class="my_make_class_controll_logo"></div>
+                <div class="content_title_box">
+                    <span class="content_title">개설 리밋:</span><span class="my_make_class_num">10</span><span>개</span>
+                </div>
+                <div class="swiper mySwiper swiper_btn_pos">
+                    <div class="swiper-wrapper my_make_class_content">
+                    
+                    </div>
+                </div>
+                <div class="my_make_class_controll_box">
+                    <span class="close_btn">
+                        닫기
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <h1>프로필</h1>
+        <div class="profile">
+            <div class="profile_info">
+                <div class="profile_box">
+                    <div class="profile_img"></div>
+                    <div class="profile_text_box">
+                        <p class="profile_text">안녕하세요</p>
+                        <span class="profile_text">ID값</span><span class="profile_text">님</span>
+                    </div>
+                </div>
+                <div class="user_info">
+            <!--값 넣어주세요======================================== -->
+                    <h3>이름</h3>
+                    <p class="user_name info_div">홍길동</p>
+                    <h3>생년월일</h3>
+                    <p class="user_birth info_div">19990621</p>
+                    <h3>희망지역</h3>
+                    <p class="user_addr info_div">강동구</p>
+                    <h3>카테고리</h3>
+                    <p class="user_category info_div">스포츠</p>
+                </div>
+            </div>
+            <div class="profile_menu">
+                <div class="menu1 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">리밋 만들기</p>
+                    <p class="menu_info">취향에 맞는 동아리를 추천해드려요.</p>
+                </div>
+                <div class="menu2 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">가입한 리밋 관리</p>
+                    <p class="menu_info">내가 가입한 동아리를 보여드려요.</p>
+                </div>
+                <div class="menu3 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">내 리밋 관리</p>
+                    <p class="menu_info">내가 개설한 동아리를 관리해요.</p>
+                </div>
+                <div class="menu4 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">리밋 문의</p>
+                    <p class="menu_info">모르는것을 질문하세요.</p>
+                </div>
+                <div class="menu5 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">정보 수정</p>
+                    <p class="menu_info">개인 정보를 수정해요.</p>
+                </div>
+                <div class="menu6 menu">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium jss264 css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FaceRetouchingNaturalIcon"><circle cx="9" cy="13" r="1.25"></circle><path d="m20.77 8.58-.92 2.01c.09.46.15.93.15 1.41 0 4.41-3.59 8-8 8s-8-3.59-8-8c0-.05.01-.1 0-.14 2.6-.98 4.69-2.99 5.74-5.55C11.58 8.56 14.37 10 17.5 10c.45 0 .89-.04 1.33-.1l-.6-1.32-.88-1.93-1.93-.88-2.79-1.27 2.79-1.27.71-.32C14.87 2.33 13.47 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.47-.33-2.87-.9-4.13l-.33.71z"></path><circle cx="15" cy="13" r="1.25"></circle><path d="M20.6 5.6 19.5 8l-1.1-2.4L16 4.5l2.4-1.1L19.5 1l1.1 2.4L23 4.5z"></path></svg>
+                    <p class="menu_title">회원탈퇴</p>
+                    <p class="menu_info">회원을 탈퇴하세요.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="f_text_info_L">
+                <h1>Re-meet</h1>
+                <div class="f_logo">
+
+                </div>
+            </div>
+            <div class="f_text_info_center">
+                <div class="span_box_top">
+                    <span>회사소개</span>
+                    <span>이용약관</span>
+                    <span>개인정보처리방침</span>
+                    <span>자주 묻는 질문</span>
+                    <span>공지사항</span>
+                </div>
+                <div class="span_box_bot">
+                    <div class="span_pos_box">
+                        <span>KH정보교육원</span>
+                        <span>사업자번호: 000-00-00000</span>
+                        <span>주소:  서울특별시 강남구 테헤란로14길</span>
+                        <span>운영시간: 09:00 ~ 18:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sns_box">
+                <div class="sns1 sns_img"></div>
+                <div class="sns2 sns_img"></div>
+                <div class="sns3 sns_img"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/common.js"></script>
+    <script src="../js/createClass.js"></script>
+    <script src="../js/updateUserInfo.js"></script>
+    <script src="../js/me_regi_my_make.js"></script>
+</body>
+</html>
