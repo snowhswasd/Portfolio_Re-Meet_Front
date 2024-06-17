@@ -202,6 +202,6 @@ select::-webkit-scrollbar-button {
 
 @media screen and (max-width:480px) {
    form{
-      top: 70%;
+      top: 60%;
    }
 }
