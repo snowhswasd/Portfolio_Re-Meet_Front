@@ -198,3 +198,10 @@ select::-webkit-scrollbar-thumb {
 select::-webkit-scrollbar-button {
    display: none;
 }
+
+
+@media screen and (max-width:480px) {
+   form{
+      top: 70%;
+   }
+}

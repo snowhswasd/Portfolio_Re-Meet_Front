@@ -274,7 +274,9 @@ textarea:hover{
     flex-wrap: wrap;
     gap: 10px;
 }
-
+.start_score_give:hover{
+    cursor: pointer;
+}
 
 .class_cate{
     display: flex;
