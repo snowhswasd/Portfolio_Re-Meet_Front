@@ -77,14 +77,14 @@ for(let i=0; i<10; i++){
 
 
 
-let wish_list = document.getElementsByClassName("wish_list")[0]
-let none_heart = document.getElementsByClassName("none_heart")[0]
-let full_heart = document.getElementsByClassName("full_heart")[0]
+let wish_list = document.getElementsByClassName("wish_list")
+let none_heart = document.getElementsByClassName("none_heart")
+let full_heart = document.getElementsByClassName("full_heart")
 let wish_count = 0;
 
 
 for(let i=0; i<2; i++){
-    wish_list.addEventListener('click', function(){
+    wish_list[i].addEventListener('click', function(){
         for(let i=0; i<2; i++){
             if( (wish_count%2) == 1){
                 none_heart[i].style.display="block"
