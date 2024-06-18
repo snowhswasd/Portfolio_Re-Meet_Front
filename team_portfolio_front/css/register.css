@@ -85,7 +85,7 @@ form {
    flex-direction: column;
    align-items: center;
    position: absolute;
-   top: 55%;
+   top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    border: 4px solid rgb(204, 234, 221);
@@ -202,6 +202,6 @@ select::-webkit-scrollbar-button {
 
 @media screen and (max-width:480px) {
    form{
-      top: 60%;
+      top: 70%;
    }
 }

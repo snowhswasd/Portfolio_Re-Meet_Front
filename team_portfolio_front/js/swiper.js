@@ -13,7 +13,7 @@ let mini_cate_img =
 
     for(let i=0; i<9; i++){
         bot_nav.innerHTML +=`
-        <a href="./classPage(index).html">
+        <a href="./searchPage(index).html">
             <div class="bot_nav_menu">
                 <div class="bot_nav_icon"></div>
                 <span>${mini_cate_title[i]}</span>
@@ -24,7 +24,7 @@ let mini_cate_img =
     }
     
 // 스와이퍼=======================================================
-init()
+// init()
 swiper = new Swiper(".mySwiper", {
     effect: 'slide',
     slidesPerView: 1, // 한번에 보여줄 칸수
@@ -45,9 +45,136 @@ swiper = new Swiper(".mySwiper", {
         nextEl: '.swiper-button-prev',
         prevEl: '.swiper-button-next',
     },
-
-
 });
+swiper1 = new Swiper(".mySwiper2", {
+    effect: 'slide',
+    slidesPerView: 3, // 한번에 보여줄 칸수
+    spaceBetween: 30, // 칸 사이사이마다의 여백
+    slidesPerGroup: 1, // 한번에 몇개씩 빠져 나가게
+
+    autoplay: {
+        delay: 1000,// setInterval 같은거
+    },
+    speed: 1000, // 들어올때까지 걸리는 시간
+    loop: true,
+    // custom1_L
+    navigation: {
+        nextEl: '.custom1_L',
+        prevEl: '.custom1_R',
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,  //브라우저가 768보다 클 때
+            spaceBetween: 0,
+        },
+        480: {
+            slidesPerView: 2,  //브라우저가 768보다 클 때
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,  //브라우저가 1024보다 클 때
+            spaceBetween: 30,
+        },
+    }
+});
+swiper2 = new Swiper(".mySwiper3", {
+    effect: 'slide',
+    slidesPerView: 4, // 한번에 보여줄 칸수
+    spaceBetween: 30, // 칸 사이사이마다의 여백
+    slidesPerGroup: 1, // 한번에 몇개씩 빠져 나가게
+
+    autoplay: {
+        delay: 1000, // setInterval 같은거
+        disableOnInteraction: false,
+        reverseDirection: true,
+    },
+    speed: 1000, // 들어올때까지 걸리는 시간
+    loop: true,
+
+    navigation: {
+        nextEl: '.custom2_L',
+        prevEl: '.custom2_R',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,  //브라우저가 768보다 클 때
+            spaceBetween: 0,
+        },
+        480: {
+            slidesPerView: 2,  //브라우저가 768보다 클 때
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,  //브라우저가 1024보다 클 때
+            spaceBetween: 30,
+        },
+    }
+});
+swiper3 = new Swiper(".mySwiper4", {
+    effect: 'slide',
+    slidesPerView: 4, // 한번에 보여줄 칸수
+    spaceBetween: 30, // 칸 사이사이마다의 여백
+    slidesPerGroup: 1, // 한번에 몇개씩 빠져 나가게
+
+    autoplay: {
+        delay: 1000 // setInterval 같은거
+    },
+    speed: 1000, // 들어올때까지 걸리는 시간
+    loop: true,
+    // custom1_L
+    navigation: {
+        nextEl: '.custom3_L',
+        prevEl: '.custom3_R',
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,  //브라우저가 768보다 클 때
+            spaceBetween: 0,
+        },
+        480: {
+            slidesPerView: 2,  //브라우저가 768보다 클 때
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,  //브라우저가 1024보다 클 때
+            spaceBetween: 30,
+        },
+    }
+});
+swiper4 = new Swiper(".mySwiper5", {
+    effect: 'slide',
+    slidesPerView: 4, // 한번에 보여줄 칸수
+    spaceBetween: 30, // 칸 사이사이마다의 여백
+    slidesPerGroup: 1, // 한번에 몇개씩 빠져 나가게
+
+    autoplay: {
+        delay: 1000, // setInterval 같은거
+        reverseDirection: true,
+    },
+    speed: 1000, // 들어올때까지 걸리는 시간
+    loop: true,
+
+    navigation: {
+        nextEl: '.custom4_L',
+        prevEl: '.custom4_R',
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,  //브라우저가 768보다 클 때
+            spaceBetween: 0,
+        },
+        480: {
+            slidesPerView: 2,  //브라우저가 768보다 클 때
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,  //브라우저가 1024보다 클 때
+            spaceBetween: 30,
+        },
+    }
+})
 var swiper5 = new Swiper(".mySwiper6", {
     effect: 'slide',
     slidesPerView: 5, // 한번에 보여줄 칸수
@@ -351,11 +478,12 @@ function toggleHeart(button) {
     event.preventDefault();
 }
 
+/*
+
 var swiper1;
 var swiper2;
 var swiper3;
 var swiper4;
-
 
 function init() {
     // 메인 동아리==================================================
@@ -489,25 +617,25 @@ function init() {
         }
     })
 }
+*/
 
 
 
+// let timer;
 
-let timer;
+// window.addEventListener("resize", function(){
 
-window.addEventListener("resize", function(){
-
-    swiper1.autoplay.stop();
-    swiper2.autoplay.stop();
-    swiper3.autoplay.stop();
-    swiper4.autoplay.stop();    
+//     swiper1.autoplay.stop();
+//     swiper2.autoplay.stop();
+//     swiper3.autoplay.stop();
+//     swiper4.autoplay.stop();    
     
-    clearTimeout(timer);
-    timer = setTimeout(function() {
-        init();
-        console.log("움직인다")
-    }, 1000);    
-})
+//     clearTimeout(timer);
+//     timer = setTimeout(function() {
+//         init();
+//         console.log("움직인다")
+//     }, 1000);    
+// })
 
 
 

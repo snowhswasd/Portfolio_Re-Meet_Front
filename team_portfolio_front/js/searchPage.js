@@ -251,7 +251,7 @@ let content_box = document.getElementsByClassName("content_box")[0]
 
 for(let i=0; i<16; i++)
     content_box.innerHTML +=`
-    <a href="#">
+    <a href="classPage(index).html">
     <div class="search_content_outer">
         <div class="search_content_inner_box">
             <!-- 이미지 나오는곳 -->
