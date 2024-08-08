@@ -30,19 +30,11 @@ var swiper = new Swiper(".mySwiper", {
 let sub_img = document.querySelectorAll('.swiper-wrapper img');
 let select_img = document.getElementById('main_img');
 
-select_img.style.display = 'block';
-select_img.innerHTML = '<img src="' + sub_img[0].src + '" alt="' + sub_img[0].alt + '">';
-
+select_img.innerHTML = `<img src="${sub_img[0].src}" alt="${sub_img[0].alt}">`;
 
 for (let i = 0; i < sub_img.length; i++) {
     sub_img[i].onclick = function() {
-        
-        select_img.style.display = 'block';
-        select_img.innerHTML = '<img src="' + this.src + '" alt="' + this.alt + '">';
-
-        for (let j = 0; j < sub_img.length; j++) {
-            sub_img[j].style.border = 'none';
-        }
+        select_img.innerHTML = `<img src="${this.src}" alt="${this.alt}">`;
     };
 }
 
